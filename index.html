@@ -3,61 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yishan's Home Page</title>
+    <title>Yishan Lin | Industrial AI & System Architect</title>
+    <meta name="description" content="Professional portfolio of Yishan Lin, specializing in Industrial AI, Machine Vision, CDN Scheduling, and Network Forensics.">
+    <meta name="keywords" content="Yishan Lin, AI Engineer, System Architect, Machine Vision, Industrial IoT, CDN Scheduling, Network Security">
+    <meta name="author" content="Yishan Lin">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary-color: #00f2ff;
+            --bg-dark: #08090d;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --text-main: #e0e0e0;
+            --text-dim: #a0a0a0;
+            --accent-gradient: linear-gradient(45deg, #00f2ff, #0066ff);
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Dynamic Background Glow */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #12141d 0%, #08090d 100%);
+            z-index: -1;
+        }
+
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
         }
-        h1, h2 {
-            color: #333;
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding-bottom: 80px;
+            animation: fadeInDown 1s ease-out;
         }
-        p {
-            color: #666;
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            letter-spacing: 8px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Yishan Lin</h1>
-            <p>A product manager still wandering the Earth without being enslaved by AI machines.</p>
-        </header>
-        <section>
-            <h2>Contact</h2>
-            <p>Address: China</p>
-            <p>Email: linyishan@gmail.com</p>
-        </section>
-        <section>
-            <h2>Projects</h2>
-            <p>Industrial Quality Inspection System: Achieves machine vision inspection on the production line through the capabilities of AI and robotics.</p>
-            <p>Intelligent Industrial Park Platform: Realizes efficient intelligent management of security, lighting, energy, and production through multi-system linkage, multi-scenario strategies, and multi-technology integration.</p>
-            <p>CDN Resource Scheduling System: Performs real-time detection and analysis of CDN resources, as well as intelligent scheduling of user requests.</p>
-            <p>Network Information Forensics Platform: Conducts detection and information acquisition of target networks based on the analysis of communication messages.</p>
-            <p>Self-built Website: A self-built website with a daily visit volume reaching up to 650K.</p>
-        </section>
-        <section>
-            <h2>Capability</h2>
-            <p>Product Planning & Strategy</p>
-            <p>Business Communication</p>
-            <p>Requirement & Data Analysis</p>
-            <p>UI/UX Design</p>
-            <p>Project Management</p>
-        </section>
-        <section>
-            <h2>Interests</h2>
-            <p>Technology Trend, Computer, Party, Billiards</p>
-        </section>
-    </div>
-</body>
-</html>
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* Projects Grid */
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: "";
+            height: 1px;
+            flex-grow: 1;
+            background: linear-gradient(90deg, var(--primary-color), transparent);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 242, 255, 0.1);
+            padding: 35px;
+            border-radius: 4px; /* Industrial look */
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            backdrop-filter: blur(12px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.15);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .project-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        /* Stats & Tags */
+        .stats-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(0, 242
